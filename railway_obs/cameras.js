@@ -11,3 +11,6 @@ cameras = [
     { name: "竹南=崎頂", url: "https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=245&t=" },
     //{ name: "保安=台南", url: "https://trafficvideo2.tainan.gov.tw/a0c6236b?t=" },
 ]
+
+refreshTitle();
+refreshImg();
