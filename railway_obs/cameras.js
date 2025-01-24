@@ -13,8 +13,8 @@ cameras = [
 ]
 
 if(cameras.length >= 4) {
-    $("#topbar > .left").html(`<b>${cameras[0].name}<br>${cameras[1].name}</b>`);
-    $("#topbar > .right").html(`<b>${cameras[2].name}<br>${cameras[3].name}</b>`);
+    $("#topbar > .left").html(`<b>${cameras[0].name}<br>${cameras[2].name}</b>`);
+    $("#topbar > .right").html(`<b>${cameras[1].name}<br>${cameras[3].name}</b>`);
 }
 
 rand = Math.random();
