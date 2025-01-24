@@ -7,6 +7,24 @@
 <script>
 $(() => {
     cameras = []
+
+    function refreshTitle() {
+        if(cameras.length >= 4) {
+            $("#topbar > .left").html(`<b>${cameras[0].name}<br>${cameras[1].name}</b>`);
+            $("#topbar > .right").html(`<b>${cameras[2].name}<br>${cameras[3].name}</b>`);
+        }
+    }
+
+    function refreshImg() {
+        rand = Math.random();
+        if(cameras.length >= 4) {
+            $("#cam1 > img").attr("src", cameras[0].url + rand);
+            $("#cam2 > img").attr("src", cameras[1].url + rand);
+            $("#cam3 > img").attr("src", cameras[2].url + rand);
+            $("#cam4 > img").attr("src", cameras[3].url + rand);
+        }
+    }
+    
     if(window.Worker) {
         timeWorker = new window.Worker("./timer.js");
         timeWorker.onmessage = () => {
@@ -17,22 +35,12 @@ $(() => {
         cameraWorker = new window.Worker("./timer.js");
         cameraWorker.onmessage = () => {
             $.getScript("https://sa411022.github.io/railway_obs/cameras.js");
-            if(cameras.length >= 4) {
-                $("#topbar > .left").html(`<b>${cameras[0].name}<br>${cameras[1].name}</b>`);
-                $("#topbar > .right").html(`<b>${cameras[2].name}<br>${cameras[3].name}</b>`);
-            }
         }
         cameraWorker.postMessage(30000);
 
         imgWorker = new window.Worker("./timer.js");
         imgWorker.onmessage = () => {
-            rand = Math.random();
-            if(cameras.length >= 4) {
-                $("#cam1 > img").attr("src", cameras[0].url + rand);
-                $("#cam2 > img").attr("src", cameras[1].url + rand);
-                $("#cam3 > img").attr("src", cameras[2].url + rand);
-                $("#cam4 > img").attr("src", cameras[3].url + rand);
-            }
+            refreshImg();
         }
         imgWorker.postMessage(6000);
     }
