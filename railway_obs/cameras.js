@@ -1,6 +1,6 @@
 cameras = [
     //{ name: "保安=台南", url: "https://trafficvideo2.tainan.gov.tw/a0c6236b?t=" },
-    //{ name: "大肚=龍井", url: "https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=695&t=" },
+    { name: "大肚=龍井", url: "https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=695&t=" },
     //{ name: "台中港線", url: "https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=32&t=" },
     //{ name: "台中港線", url: "https://cctv-ss03.thb.gov.tw/T17-000K+940?t=" },
     //{ name: "大甲=台中港", url: "https://cctv-ss03.thb.gov.tw/T1-156K+650?resolution=CIF_352X288&t=" },
@@ -12,10 +12,16 @@ cameras = [
     //{ name: "竹南=崎頂", url: "https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=245&t=" },
     //{ name: "桃園=內壢", url: "https://cctvtraffic.tycg.gov.tw/camera067?t=" },
     { name: "福隆=貢寮", url: "https://cctv-ss01.thb.gov.tw/T2-100K+420?t=" },
-    { name: "石城=大里", url: "https://cctv-ss01.thb.gov.tw/T2-118K+300?t=" },
+    //{ name: "石城=大里", url: "https://cctv-ss01.thb.gov.tw/T2-118K+300?t=" },
     { name: "龜山=大溪", url: "https://cctv-ss01.thb.gov.tw/T2-124K+000?t=" },
     //{ name: "宜蘭=二結", url: "https://cctv-ss02.thb.gov.tw/T9-085K+050?t=" },
     { name: "宜蘭=二結", url: "https://cctv-ss02.thb.gov.tw/T9-085K+900?t=" },
+    //{ name: "蘇澳新=蘇澳", url: "https://cctv-ss02.thb.gov.tw/T9-102K+360?t=" },
+    //{ name: "蘇澳=蘇澳新", url: "https://cctv-ss01.thb.gov.tw/T2E-009K+975?t=" },
+    //{ name: "和平=和仁", url: "https://cctv-ss02.thb.gov.tw/T9D-058K+774?t=" },
+    //{ name: "和仁=崇德", url: "https://cctv-ss06.thb.gov.tw/T9-154K+956(N)?t=" },
+    //{ name: "景美=新城", url: "https://cctv-ss06.thb.gov.tw/T9-175K+975?t=" },
+    //{ name: "鳳林=南平", url: "https://cctv-ss06.thb.gov.tw/T9-222K+070?t=" },
     //{ name: "", url: "" },
 ]
 
