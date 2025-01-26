@@ -1,6 +1,6 @@
 cameras = [
     //{ name: "潮州=崁頂", url: "https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=345&t=" },
-    //{ name: "竹田=潮州", url: "https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=238&t=" },
+    { name: "竹田=潮州", url: "https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=238&t=" },
     //{ name: "保安=台南", url: "https://trafficvideo2.tainan.gov.tw/a0c6236b?t=" },
     //{ name: "嘉北=民雄", url: "https://cctv-ss06.thb.gov.tw/T1-262K+985?t=" },
     //{ name: "嘉北=民雄", url: "https://cctv-ss06.thb.gov.tw/T1-262K+500?t=" },
@@ -23,7 +23,7 @@ cameras = [
     //{ name: "談文=大山", url: "https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=582&t=" },
     //{ name: "竹南=談文", url: "https://cctv-ss03.thb.gov.tw/T1F-003K+650?resolution=CIF_352X288&t=" },
     //{ name: "竹南=崎頂", url: "https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=245&t=" },
-    { name: "竹北=北新竹", url: "https://cctv-ss08.thb.gov.tw/T68-7K+240?t=" },
+    //{ name: "竹北=北新竹", url: "https://cctv-ss08.thb.gov.tw/T68-7K+240?t=" },
     //{ name: "桃園=內壢", url: "https://cctvtraffic.tycg.gov.tw/camera067?t=" },
     //{ name: "山鼻=林口", url: "https://cctvn.freeway.gov.tw/abs2mjpg/bmjpg?camera=14260&t=" },
     //{ name: "林口=長庚醫院", url: "https://cctvn.freeway.gov.tw/abs2mjpg/bmjpg?camera=14140&t=" },
