@@ -1,8 +1,8 @@
 cameras = [
-    { name: "潮州=崁頂", url: "https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=345&t=" },
-    { name: "竹田=潮州", url: "https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=238&t=" },
-    //{ name: "保安=台南", url: "https://trafficvideo2.tainan.gov.tw/a0c6236b?t=" },
-    //{ name: "南靖=後壁", url: "https://cctv-ss06.thb.gov.tw/T1-277K+700-1?t=" },
+    //{ name: "潮州=崁頂", url: "https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=345&t=" },
+    //{ name: "竹田=潮州", url: "https://cctvs.freeway.gov.tw/live-view/mjpg/video.cgi?camera=238&t=" },
+    { name: "保安=台南", url: "https://trafficvideo2.tainan.gov.tw/a0c6236b?t=" },
+    { name: "南靖=後壁", url: "https://cctv-ss06.thb.gov.tw/T1-277K+700-1?t=" },
     //{ name: "嘉北=民雄", url: "https://cctv-ss06.thb.gov.tw/T1-262K+985?t=" },
     //{ name: "嘉北=民雄", url: "https://cctv-ss06.thb.gov.tw/T1-262K+500?t=" },
     //{ name: "斗南=石龜", url: "https://cctv-ss06.thb.gov.tw/T1-244K+620?t=" },
