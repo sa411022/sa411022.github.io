@@ -22,9 +22,9 @@ cameras = [
     { name: "大甲=台中港", url: "https://cctv-ss03.thb.gov.tw/T1-156K+650?resolution=CIF_352X288&t=" },
     { name: "通霄=苑裡", url: "https://cctv-ss04.thb.gov.tw/T1-139K+850?resolution=CIF_352X288&t=" },
     { name: "通霄=新埔", url: "https://cctv-ss04.thb.gov.tw/T1-132K+050?resolution=CIF_352X288&t=" },
-    //{ name: "談文=大山", url: "https://cctv-ss04.thb.gov.tw/T61-097K+100?resolution=CIF_352X288&t=" },
+    { name: "談文=大山", url: "https://cctv-ss04.thb.gov.tw/T61-097K+100?resolution=CIF_352X288&t=" },
     //{ name: "談文=大山", url: "https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=582&t=" },
-    //{ name: "竹南=談文(造橋)", url: "https://cctv-ss03.thb.gov.tw/T1F-003K+650?resolution=CIF_352X288&t=" },
+    { name: "竹南=談文(造橋)", url: "https://cctv-ss03.thb.gov.tw/T1F-003K+650?resolution=CIF_352X288&t=" },
     //{ name: "竹南=崎頂", url: "https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=245&t=" },
     //{ name: "竹北=北新竹", url: "https://cctv-ss08.thb.gov.tw/T68-7K+240?t=" },
     //{ name: "桃園=內壢", url: "https://cctvtraffic.tycg.gov.tw/camera067?t=" },
@@ -46,15 +46,41 @@ cameras = [
     //{ name: "", url: "" },
 ]
 
-if(cameras.length >= 4) {
-    $("#topbar > .left").html(`<b>${cameras[0].name}<br>${cameras[2].name}</b>`);
-    $("#topbar > .right").html(`<b>${cameras[1].name}<br>${cameras[3].name}</b>`);
+oldCount = parseInt($("#cameras").attr("count"));
+newCount = cameras.length >= 6 ? 6 : cameras.length >= 4 ? 4 : 1;
+if(oldCount != newCount) {
+    $("#cameras").empty().attr("count", newCount);
+    for(let i = 0; i < newCount; i++) {
+        $("#cameras").append(`<div class="camera"><img></div>`);
+    }
+}
+
+if(newCount == 6) {
+    $("#top > .left").html(`<b>${cameras[0].name}</b>`);
+    $("#top > .center").html(`<b>${cameras[1].name}</b>`);
+    $("#top > .right").html(`<b>${cameras[2].name}</b>`);
+    $("#bottom > .left").html(`<b>${cameras[3].name}</b>`);
+    $("#bottom > .center").html(`<b>${cameras[4].name}</b>`);
+    $("#bottom > .right").html(`<b>${cameras[5].name}</b>`);
+}
+else if(newCount == 4) {
+    $("#top > .left").html(`<b>${cameras[0].name}</b>`);
+    $("#top > .center").text("");
+    $("#top > .right").html(`<b>${cameras[1].name}</b>`);
+    $("#bottom > .left").html(`<b>${cameras[2].name}</b>`);
+    $("#bottom > .center").text("");
+    $("#bottom > .right").html(`<b>${cameras[3].name}</b>`);
+}
+else {
+    $("#top > .left").text("");
+    $("#top > .center").html(`<b>${cameras[0].name}</b>`);
+    $("#top > .right").text("");
+    $("#bottom > .left").text("");
+    $("#bottom > .center").html(`<b>${cameras[0].name}</b>`);
+    $("#bottom > .right").text("");
 }
 
 rand = Math.random();
-if(cameras.length >= 4) {
-    $("#cam1 > img").attr("src", cameras[0].url + rand);
-    $("#cam2 > img").attr("src", cameras[1].url + rand);
-    $("#cam3 > img").attr("src", cameras[2].url + rand);
-    $("#cam4 > img").attr("src", cameras[3].url + rand);
+for(let i = 0; i < newCount; i++) {
+    $(`#cameras > .camera:nth-child(${i + 1}) > img`).attr("src", cameras[i].url + rand);
 }
