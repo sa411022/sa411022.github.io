@@ -9,7 +9,7 @@ $(() => {
     if(window.Worker) {
         timeWorker = new window.Worker("./timer.js");
         timeWorker.onmessage = () => {
-            $("#topbar > .time > b").text(moment().format("YYYY/M/D HH:mm:ss"));
+            $("#top > .time > b, #bottom > .time > b").text(moment().format("YYYY/M/D HH:mm:ss"));
         }
         timeWorker.postMessage(1000);
         
@@ -24,92 +24,103 @@ $(() => {
 <style>
 body {
     background-color: black;
-    overflow-y: auto;
 }
 
-#topbar {
+#top {
     position: fixed;
     top: 0;
     height: 50px;
-    left: 0;
-    right: 0;
+    left: 10px;
+    right: 10px;
     display: flex;
 }
 
-#topbar > .left {
-    flex: 0 0 200px;
-    padding-left: 8px;
-    color: white;
-    text-align: left;
-    align-content: center;
-    font-size: 18px;
+#bottom {
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    left: 10px;
+    right: 10px;
+    display: flex;
 }
 
-#topbar > .right {
-    flex: 0 0 200px;
-    padding-right: 8px;
+#top > div,
+#bottom > div {
     color: white;
-    text-align: right;
-    align-content: center;
-    font-size: 18px;
-}
-
-#topbar > .time {
-    flex: 1 1 auto;
-    color: white;
-    text-align: center;
     align-content: center;
     font-size: 24px;
 }
 
-body > .cam > img {
-    height: 100%;
+#top > .left,
+#bottom > .left {
+    flex: 0 0 200px;
+    text-align: left;
+}
+
+#top > .center,
+#bottom > .center {
+    flex: 0 0 200px;
+    text-align: center;
+}
+
+#top > .right,
+#bottom > .right {
+    flex: 0 0 200px;
+    text-align: right;
+}
+
+#top > .time,
+#bottom > .time {
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+#cameras {
+    position: fixed;
+    top: 50px;
+    bottom: 50px;
+    left: 10px;
+    right: 10px;
+    display: grid;
+}
+
+#cameras[count="1"] {
+    grid-template-columns: 1fr;
+}
+
+#cameras[count="4"] {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#cameras[count="6"] {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#cameras > .camera {
+    overflow: hidden;
+}
+
+#cameras > .camera > img {
     width: 100%;
+    height: 100%;
 }
-
-#cam1 {
-    position: fixed;
-    top: 50px;
-    height: calc(50vh - 25px);
-    left: 0;
-    width: 50vw;
-}
-
-#cam2 {
-    position: fixed;
-    top: 50px;
-    height: calc(50vh - 25px);
-    right: 0;
-    width: 50vw;
-}
-
-#cam3 {
-    position: fixed;
-    bottom: 0;
-    height: calc(50vh - 25px);
-    left: 0;
-    width: 50vw;
-}
-
-#cam4 {
-    position: fixed;
-    bottom: 0;
-    height: calc(50vh - 25px);
-    right: 0;
-    width: 50vw;
-}
-
 </style>
 </head>
 <body>
-    <div id="topbar">
+    <div id="top">
         <div class="left"></div>
+        <div class="time"><b></b></div>
+        <div class="center"><b></b></div>
         <div class="time"><b></b></div>
         <div class="right"></div>
     </div>
-    <div id="cam1" class="cam"><img></div>
-    <div id="cam2" class="cam"><img></div>
-    <div id="cam3" class="cam"><img></div>
-    <div id="cam4" class="cam"><img></div>
+    <div id="cameras" count="0"></div>
+    <div id="bottom">
+        <div class="left"></div>
+        <div class="time"><b></b></div>
+        <div class="center"><b></b></div>
+        <div class="time"><b></b></div>
+        <div class="right"></div>
+    </div>
 </body>
 </html>
