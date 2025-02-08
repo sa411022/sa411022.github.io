@@ -42,9 +42,9 @@ cameras = [
     //{ name: "和仁=崇德", url: "https://cctv-ss06.thb.gov.tw/T9-154K+956(N)?t=" },
     //{ name: "景美=新城", url: "https://cctv-ss06.thb.gov.tw/T9-175K+975?t=" },
     //{ name: "志學=吉安", url: "https://cctv-ss06.thb.gov.tw/T9-198K+750?t=" },
-    { name: "豐田=林榮新光", url: "https://cctv-ss06.thb.gov.tw/T9-212K+000?t=" },
+    //{ name: "豐田=林榮新光", url: "https://cctv-ss06.thb.gov.tw/T9-212K+000?t=" },
     //{ name: "鳳林=南平", url: "https://cctv-ss06.thb.gov.tw/T9-222K+070?t=" },
-    { name: "三民=瑞穗", url: "https://cctv-ss06.thb.gov.tw/T9-258K+200-1?t=" },
+    //{ name: "三民=瑞穗", url: "https://cctv-ss06.thb.gov.tw/T9-258K+200-1?t=" },
     //{ name: "瀧溪=金崙", url: "https://cctv-ss05.thb.gov.tw/T9-398K+650-2?t=" },
     //{ name: "", url: "" },
 ]
