@@ -13,6 +13,7 @@ cameras = [
     //{ name: "台中=精武", url: "https://tcnvr5.taichung.gov.tw/f86ef8d1?t=" },
     //{ name: "潭子=頭家厝", url: "https://cctv-ss03.thb.gov.tw/T3-175K+350?t=" },
     //{ name: "后里=豐原", url: "https://tcnvr4.taichung.gov.tw/36f90b62?t=" },
+    //{ name: "泰安=三義", url: "https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=194&t=" },
     //{ name: "銅鑼=南勢", url: "https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=189&t=" },
     //{ name: "豐富=苗栗", url: "https://cctv-ss04.thb.gov.tw/T13-27K+820?t=" },
     //{ name: "大肚=龍井", url: "https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=695&t=" },
