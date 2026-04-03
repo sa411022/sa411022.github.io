@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8" />
+<title>SA Railway OBS</title>
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script src="../js/moment.min.js"></script>
+<script>
+$(() => {
+    const cameras = [
+        "https://cctvn.freeway.gov.tw/abs2mjpg/bmjpg?camera=40300&t=",
+        "https://cctvn.freeway.gov.tw/abs2mjpg/bmjpg?camera=40260&t=",
+        "https://cctvn.freeway.gov.tw/abs2mjpg/bmjpg?camera=40200&t=",
+        "https://cctvn.freeway.gov.tw/abs2mjpg/bmjpg?camera=40140&t=",
+        "https://cctvn.freeway.gov.tw/abs2mjpg/bmjpg?camera=19930&t=",
+        "https://cctvn.freeway.gov.tw/abs2mjpg/bmjpg?camera=19800&t=",
+        "https://cctvn.freeway.gov.tw/abs2mjpg/bmjpg?camera=19740&t=",
+        "https://cctvn.freeway.gov.tw/abs2mjpg/bmjpg?camera=19660&t="
+    ]
+    
+    const count = cameras.length >= 8 ? 8 : cameras.length >= 6 ? 6 : cameras.length >= 4 ? 4 : 1;
+    $("#cameras").attr("count", count);
+    for(let i = 0; i < count; i++) {
+        $("#cameras").append(`<div class="camera"><img></div>`);
+    }
+
+    const refresh = () => {
+        rand = Math.random();
+        for(let i = 0; i < count; i++) {
+            $(`#cameras > .camera:nth-child(${i + 1}) > img`).attr("src", cameras[i] + rand);
+        }
+        setTimeout(refresh, 6000);
+    }
+    refresh();
+});
+</script>
+<style>
+body {
+    background-color: black;
+}
+
+#cameras {
+    position: fixed;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    display: grid;
+}
+
+#cameras[count="1"] {
+    grid-template-columns: 1fr;
+}
+
+#cameras[count="4"] {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+#cameras[count="6"] {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+#cameras[count="8"] {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+
+#cameras > .camera {
+    overflow: hidden;
+}
+
+#cameras > .camera > img {
+    width: 100%;
+    height: 100%;
+}
+</style>
+</head>
+<body>
+    <div id="cameras" count="0"></div>
+</body>
+</html>
