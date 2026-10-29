@@ -8,6 +8,7 @@ cameras = [
     //{ name: "斗南=石龜", url: "https://cctv-ss06.thb.gov.tw/T1-244K+620?t=" },
     //{ name: "斗南=斗六", url: "https://cctv-ss06.thb.gov.tw/T1D-6K+900?t=" },
     //{ name: "斗六=斗南", url: "https://cctv-ss06.thb.gov.tw/T1D-6K+750?t=" },
+    //{ name: "林內=石榴", url: "https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=288&t=" },
     { name: "成功(追分)=彰化", url: "https://cctvc.freeway.gov.tw/abs2mjpg/bmjpg?camera=269&t=" },
     //{ name: "成功=新烏日", url: "https://cctv-ss03.thb.gov.tw/T1B-020K+250?t=" },
     //{ name: "台中=精武", url: "https://tcnvr5.taichung.gov.tw/f86ef8d1?t=" },
